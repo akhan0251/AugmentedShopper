@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Camera permission required for QR scanning -->
+	<key>NSCameraUsageDescription</key>
+	<string>This app needs the camera to scan QR codes from your glasses or phone.</string>
+
+	<!-- Microphone permission for voice commands -->
+	<key>NSMicrophoneUsageDescription</key>
+	<string>This app needs the microphone to receive voice commands from the Meta Ray-Bans.</string>
+
+	<!-- Photo library access for fallback image detection -->
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Needed to process photos captured by your glasses.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Needed to save images if required.</string>
+
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+			</array>
+		</dict>
+	</array>
+
+	<!-- Allow Meta AI (fb-viewapp) to call the app -->
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fb-viewapp</string>
+	</array>
+
+	<!-- External Accessory protocol for Meta Wearables -->
+	<key>UISupportedExternalAccessoryProtocols</key>
+	<array>
+		<string>com.meta.ar.wearable</string>
+	</array>
+
+	<!-- Background modes for Bluetooth and external accessories -->
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>bluetooth-peripheral</string>
+		<string>external-accessory</string>
+	</array>
+
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Needed to connect to Meta Wearables</string>
+
+	<!-- Wearables Device Access Toolkit configuration -->
+	<key>MWDAT</key>
+	<dict>
+		<key>AppLinkURLScheme</key>
+		<string>$(PRODUCT_BUNDLE_IDENTIFIER)://</string>
+		<key>MetaAppID</key>
+		<string>0</string>
+	</dict>
+	<key>UTImportedTypeDeclarations</key>
+	<array>
+		<dict/>
+	</array>
+</dict>
+</plist>

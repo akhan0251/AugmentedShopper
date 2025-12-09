@@ -1,0 +1,21 @@
+.DS_Store
+.cache/
+
+# Build products
+/DerivedData/
+/build/
+**/xcuserdata/
+*.xcuserstate
+*.moved-aside
+
+# Swift Package Manager
+/.build/
+/.swiftpm/
+/Packages/
+
+# Common IDE/editor noise
+/.idea/
+/.vscode/
+*.swp
+*.tmp
+*.log
